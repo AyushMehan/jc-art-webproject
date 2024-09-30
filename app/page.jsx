@@ -9,7 +9,7 @@ const Home = () => {
           Artwork Showcase
         </h1>
         <p className="text-lg mb-4 font-light">
-          Discover "<strong>Silence of Love</strong>", a personal reflection on the beauty of nature.
+          Discover the masterpiece <strong>Silence of Love</strong>, a personal reflection on the beauty of nature.
         </p>
         <p className="text-md mb-6 font-light">
           Dive deep into its story, explore the materials, and leave your thoughts in the comments.
