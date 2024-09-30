@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import Image from "next/image"; 
 
 const Artwork = () => {
   const [comments, setComments] = useState([]);
@@ -81,9 +82,11 @@ const Artwork = () => {
 
       {/* Artwork Image Section */}
       <div className="artwork-image-container flex justify-center mb-8">
-        <img
+        <Image
           src="/artwork.png"
           alt="Silence of Love"
+          height={800}
+          width={600}
           className="w-full max-w-4xl h-auto rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer"
           onClick={toggleVideoModal}
         />
