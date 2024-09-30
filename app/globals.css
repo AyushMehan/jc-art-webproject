@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #FDF2F8;
     --foreground: #ededed;
   }
 }
@@ -17,11 +17,72 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f7fafc, #fce7f3, #edf2f7); /* Neutral gradient */
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slow-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-in-out;
+}
+
+.animate-slow-fade-in {
+  animation: slow-fade-in 2s ease-in-out;
+}
+
+.artwork-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.media-section {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+button:focus,
+button:hover {
+  box-shadow: 0 8px 20px rgba(245, 101, 101, 0.5);
+  transform: scale(1.05);
 }
